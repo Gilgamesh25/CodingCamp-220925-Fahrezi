@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Profile - Home</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <div class="logo-circle"></div>
+            </div>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="profile.html">Our Profile</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#message">Message Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Welcome Section -->
+    <section class="welcome-section">
+        <div class="container">
+            <h1 id="welcome-title">Hi <span id="user-name">Guest</span>, Welcome To Website</h1>
+            <p class="subtitle">ini adalah website latihan pertama</p>
+            <div class="banner-placeholder">
+                <div class="banner-content">
+                    <h2>Company Banner</h2>
+                    <p>888x375</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Headquarter Section -->
+    <section class="headquarter-section">
+        <div class="container">
+            <h2>Our Headquarter</h2>
+            <div class="headquarter-cities">
+                <div class="city">
+                    <div class="city-circle">
+                        <span>JKT</span>
+                    </div>
+                    <h3>Jakarta</h3>
+                </div>
+                <div class="city">
+                    <div class="city-circle">
+                        <span>BDG</span>
+                    </div>
+                    <h3>Bandung</h3>
+                </div>
+                <div class="city">
+                    <div class="city-circle">
+                        <span>SBY</span>
+                    </div>
+                    <h3>Surabaya</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Message Us Section -->
+    <section id="message" class="message-section">
+        <div class="container">
+            <h2>Message Us</h2>
+            <div class="message-content">
+                <div class="form-container">
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number:</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="birthdate">Tanggal Lahir:</label>
+                            <input type="date" id="birthdate" name="birthdate" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Jenis Kelamin:</label>
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" name="gender" value="Laki-Laki" required>
+                                    <span>Laki-Laki</span>
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="gender" value="Perempuan" required>
+                                    <span>Perempuan</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Pesan:</label>
+                            <textarea id="message" name="message" rows="4" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </form>
+                </div>
+                
+                <div class="form-display">
+                    <h3>Form Data Display</h3>
+                    <div id="form-data" class="form-data">
+                        <p>Current Date: <span id="current-date"></span></p>
+                        <p>Name: <span id="display-name">-</span></p>
+                        <p>Email: <span id="display-email">-</span></p>
+                        <p>Phone: <span id="display-phone">-</span></p>
+                        <p>Tanggal Lahir: <span id="display-birthdate">-</span></p>
+                        <p>Jenis Kelamin: <span id="display-gender">-</span></p>
+                        <p>Pesan: <span id="display-message">-</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>Created By Newbi</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
