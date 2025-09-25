@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeWelcomeMessage();
     initializeFormValidation();
     initializeNavigation();
+    initializeMobileMenu();
 });
 
 // Initialize welcome message with dynamic name
@@ -300,6 +301,44 @@ function initializeNavigation() {
             }
         });
     });
+}
+
+// Initialize mobile menu functionality
+function initializeMobileMenu() {
+    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    const navigation = document.getElementById('navigation');
+    
+    if (mobileMenuToggle && navigation) {
+        mobileMenuToggle.addEventListener('click', function() {
+            mobileMenuToggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+        });
+        
+        // Close menu when clicking on navigation links
+        const navLinks = navigation.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenuToggle.classList.remove('active');
+                navigation.classList.remove('active');
+            });
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!mobileMenuToggle.contains(e.target) && !navigation.contains(e.target)) {
+                mobileMenuToggle.classList.remove('active');
+                navigation.classList.remove('active');
+            }
+        });
+        
+        // Close menu on window resize if screen becomes larger
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                mobileMenuToggle.classList.remove('active');
+                navigation.classList.remove('active');
+            }
+        });
+    }
 }
 
 // Add CSS for error states
